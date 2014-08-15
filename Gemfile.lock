@@ -17,6 +17,13 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/radar/by_star
+  revision: 8c22f5108b9379adc7fc80d7c5b8b163027eee10
+  specs:
+    by_star (2.2.1)
+      activesupport
+
+GIT
   remote: git://github.com/rweng/jquery-datatables-rails.git
   revision: 0a1f0824aa705cf0b254972eb6063ab34a517966
   specs:
@@ -249,6 +256,7 @@ DEPENDENCIES
   bootstrap-sass!
   bootstrap3-datetimepicker-rails (~> 3.0.0)
   bower-rails (~> 0.7.2)
+  by_star!
   coffee-rails (~> 4.0.0)
   datetimepicker-rails!
   devise

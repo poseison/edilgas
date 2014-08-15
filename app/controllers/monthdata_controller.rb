@@ -3,8 +3,9 @@ class MonthdataController < ApplicationController
   def pay
     @mylocations=Gaslocation.all
     @nmeters=Array.new
+    @mydata=params[:ltable]
     @mylocations.each do |x|
-      @nmeters<<{streetname:x. address, id:x.id,value1:0, value2:0}
+      @nmeters<<{streetname:x. address, id:x.id,value1:Gaslocation.monthconsumption(x.id,@mydata), value2:0}
     end
     puts @nmeters
     render :json => @nmeters

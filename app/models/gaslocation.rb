@@ -16,6 +16,28 @@ class Gaslocation < ActiveRecord::Base
       end
       ln
    end
+   def self.monthconsumption(ql,fdate)
+     @gaslocation=Gaslocation.find(ql)
+     date = Date.parse(fdate)
+     month=date.month
+     year=date.year
+     puts month
+     puts year
+     @lmeter=Array.new
+     @lmeter=@gaslocation.gasmeters
+     if @lmeter.size <=0 then 
+        ln=0
+      else
+        @nmeter=@lmeter.by_month(month)
+        sum=0
+        @nmeter.each do |x|
+          puts x.vslue
+          sum=sum+x.vslue
+        end
+        ln=sum
+      end
+      ln
+   end
    def self.lastupdate(gl)
    @mygaslocation=Gaslocation.find(gl)
    @gmeters=@mygaslocation.gasmeters.order('capturedate')

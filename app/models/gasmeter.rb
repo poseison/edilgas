@@ -1,5 +1,6 @@
 require 'date'
 class Gasmeter < ActiveRecord::Base
+  by_star_field :capturedate
   scope :bymonth,  ->(d1,gl) { where("capturedate >= ? AND capturedate <= ? AND gaslocation_id = ?" , Date.parse(d1),Date.parse(d1)+1,gl) }
   scope :byid,  ->(id) { where("gaslocation_id = ?" ,id) }
     belongs_to:gaslocation
