@@ -16,6 +16,20 @@ class Gaslocation < ActiveRecord::Base
       end
       ln
    end
+   def self.totalconsumption(gl)
+        @gaslocation=Gaslocation.find(gl)
+        @lmeter=Array.new
+        @lmeter=@gaslocation.gasmeters
+        ln=0   
+        if @lmeter.size <=0 then 
+           ln=0
+         else
+           @lmeter.each do |x|
+             ln=ln+x.vslue
+           end
+         end
+         ln  
+      end
    def self.monthconsumption(ql,fdate)
      @gaslocation=Gaslocation.find(ql)
      date = Date.parse(fdate)
