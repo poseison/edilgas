@@ -6,6 +6,7 @@ Mygasmeter::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = true
 
+
   # Do not eager load code on boot.
   config.eager_load = false
   config.assets.precompile += %w( .svg .eot .woff .ttf )

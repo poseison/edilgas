@@ -18,6 +18,7 @@ gem 'mysql2'
 gem 'by_star', :git => "git://github.com/radar/by_star"
 gem 'populator'
 gem 'faker'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
