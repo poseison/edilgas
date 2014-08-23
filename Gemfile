@@ -16,6 +16,8 @@ gem 'formtastic'
 gem 'yaml_db'
 gem 'mysql2'
 gem 'by_star', :git => "git://github.com/radar/by_star"
+gem 'populator'
+gem 'faker'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
