@@ -146,7 +146,7 @@ $ ->
       
   
   $scope.submitaverage = ->
-    $http.post("/avresults.json",
+    $http.post("http://37.6.249.98:3000/avresults.json",
       ltable: $scope.newEntry.consumption
       lchoice: $scope.lchoice
       lid: gon.locid
@@ -185,7 +185,7 @@ $ ->
     
   
   $scope.submit = ->
-    $http.post("/ltables.json",
+    $http.post("http://37.6.249.98:3000/ltables.json",
       ltable: $scope.newEntry.title
       ldtable: $scope.newEntry.titleza
       lid: gon.locid
@@ -197,7 +197,7 @@ $ ->
     )(this)).error (data) ->
       console.log $scope.entries
 
-    $http.post("/api/v1/monthcharts.json",
+    $http.post("http://37.6.249.98:3000/api/v1/monthcharts.json",
       monthchart: $scope.newEntry.title
     ).success(((_this) ->
       (data) ->
