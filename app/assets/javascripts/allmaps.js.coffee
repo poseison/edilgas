@@ -1,4 +1,4 @@
-
+    
 jQuery ->
         $('#products').dataTable
           sPaginationType: "full_numbers"
@@ -431,7 +431,7 @@ __extends_ = (child, parent) ->
     @titlos = "Monthly "
 
   $scope.firstpost = ->
-    $http.post("http://localhost:3000/dailydata.json",
+    $http.post("/dailydata.json",
       ltable: $scope.checkOut
     ).success(((_this) ->
       (data) ->
@@ -441,7 +441,7 @@ __extends_ = (child, parent) ->
 
 
   $scope.submit2 = ->
-    $http.post("http://localhost:3000/monthdata.json",
+    $http.post("/monthdata.json",
       ltable: $scope.checkOut
     ).success(((_this) ->
       (data) ->
@@ -539,7 +539,7 @@ DemoTestCtrl = ((_super) ->
   DemoTestCtrl
 )(BaseCtrl)
 firstpost: ->
-  $http.post("http://localhost:3000/dailydata.json",
+  $http.post("/dailydata.json",
     ltable: $scope.checkOut
   ).success(((_this) ->
     (data) ->
@@ -549,7 +549,7 @@ firstpost: ->
 
 
 submit2: ->
-  $http.post("http://localhost:3000/monthdata.json",
+  $http.post("/monthdata.json",
     ltable: $scope.checkOut
   ).success(((_this) ->
     (data) ->
